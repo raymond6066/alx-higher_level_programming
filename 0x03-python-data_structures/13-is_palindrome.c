@@ -60,11 +60,13 @@ int is_palindrome(listint_t **head)
 		{
 			dup = dup->next;
 			temp = temp->next;
-			return (0);
 		}
-
-		if (!dup)
-			return (1);
-
-		return (0);
+		else
+			return (0);
 	}
+
+	if (!dup)
+		return (1);
+
+        return (0);
+}
