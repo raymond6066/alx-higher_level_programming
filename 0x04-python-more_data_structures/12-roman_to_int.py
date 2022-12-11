@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def to_subtract(list_num):
-
     to_sub = 0
     max_list = max(list_num)
 
@@ -17,6 +16,7 @@ def roman_to_int(roman_string):
 
     if not isinstance(roman_string, str):
         return 0
+
     rom_n = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     list_keys = list(rom_n.keys())
 
@@ -32,8 +32,9 @@ def roman_to_int(roman_string):
                     list_num = [rom_n.get(ch)]
                 else:
                     list_num.append(rom_n.get(ch))
+
                 last_rom = rom_n.get(ch)
 
-        num += to_subtract(list_num)
+    num += to_subtract(list_num)
 
-        return (num)
+    return (num)
